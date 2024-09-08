@@ -68,6 +68,7 @@ colorlinks,linkcolor=blue,citecolor=blue,final]{hyperref}
 \def\BR@@bibitem{\begingroup\catcode`\%=12 \ORIG@BR@@bibitem}
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow} % Required for merging rows
 
 % بسته‌ لازم برای تنظیم سربرگ‌ها
 \usepackage{fancyhdr}
@@ -110,9 +111,6 @@ colorlinks,linkcolor=blue,citecolor=blue,final]{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % فراخوانی بسته زی‌پرشین (باید آخرین بسته باشد)
 \usepackage[extrafootnotefeatures, localise=on, displaymathdigits=persian]{xepersian}
-
-
-
 
 \makeatletter
 % تعریف قلم فارسی و انگلیسی و مکان قلم‌ها
@@ -195,7 +193,7 @@ colorlinks,linkcolor=blue,citecolor=blue,final]{hyperref}
 \numberwithin{algorithm}{chapter}
 \def\listalgorithmname{فهرست الگوریتم‌ها}
 \def\listfigurename{فهرست تصاویر}
-\def\listtablename{فهرست جداول}
+\def\listname{فهرست جداول}
 
 % دستور های لازم برای تعریف ترجمهٔ دستورات الگوریتم
 \makeatletter
@@ -322,7 +320,7 @@ colorlinks,linkcolor=blue,citecolor=blue,final]{hyperref}
 %%% امکان درج کد در سند
 % در این قسمت رنگ، قلم و قالب‌بندی قسمت‌های مختلف یک کد تعیین می‌شود. 
 \lstdefinestyle{myStyle}{
-	basicstyle=\ttfamily, % whole listing /w verbatim font
+	basicstyle=\ttfamily\scriptsize, % whole listing /w verbatim font
 	keywordstyle=\color{blue}\bfseries, % bold black keywords
 	identifierstyle=, % nothing happens
 	commentstyle=\color{LimeGreen}, % green comments
@@ -330,9 +328,9 @@ colorlinks,linkcolor=blue,citecolor=blue,final]{hyperref}
 	showstringspaces=false % no special string spaces
 	breaklines=true,
 	breakatwhitespace=false,
-	numbers=right, % line number formats
-	numberstyle=\footnotesize\lr,
-	numbersep=-10pt,
+	numbers=left, % line number formats
+	numberstyle=\scriptsize\lr,
+	numbersep=10pt,
 	frame=single,
 	captionpos=b,
 	captiondirection=RTL

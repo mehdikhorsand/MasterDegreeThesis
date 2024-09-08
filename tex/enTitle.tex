@@ -5,18 +5,28 @@
 \latinuniversity{University of Tehran}
 \latincollege{College of Engineering}
 \latinfaculty{Faculty of Engineering Science}
-\latindepartment{Algorithms and Computation}
+\latindepartment{Software Engineering}
 \latinsubject{Computer Engineering}
-\latinfield{Algorithms and Computation}
-\latintitle{Writing projects, theses and dissertations using tehran-thesis class}
-\firstlatinsupervisor{First Supervisor}
-\secondlatinsupervisor{Second Supervisor}
-\firstlatinadvisor{First Advisor}
+\latinfield{Software Engineering}
+\latintitle{Automatically Generate Testcases for Financial Transaction Processing Systems Based on Adaptive Random Testing}
+\firstlatinsupervisor{Dr. Ramtin Khosravi}
+%\secondlatinsupervisor{Second Supervisor}
+%\firstlatinadvisor{First Advisor}
 %\secondlatinadvisor{Second Advisor}
-\latinname{Sina}
-\latinsurname{Momken}
-\latinthesisdate{May 2017}
-\latinkeywords{Writing Thesis, Template, \LaTeX, \XePersian}
+\latinname{Mehdi}
+\latinsurname{Khorsand}
+\latinthesisdate{September 2024}
+\latinkeywords{
+	Software Testing, 
+	Auto Generate Test Cases, 
+	Random Testing, 
+	Adaptive Random Testing
+	}
 \en-abstract{
-This thesis studies on writing projects, theses and dissertations using tehran-thesis class. It ...
+Adaptive Random Testing (ART) was introduced in 2001 by Chen et al. to address the limitations of traditional random testing methods, such as repeatability, inefficiency, and limited focus. This method is based on the theory that fault and failure points within the input domain are continuous. Initially, ART focused on software with numerical input domains and sought to improve upon the shortcomings of traditional random testing by selecting diverse test cases within its test set.
+In ART, a number of candidate test cases are randomly generated, and the one that differs the most from the previously selected test cases is chosen. The difference between test cases was initially measured in numerical domains by mapping the software inputs onto a multi-dimensional space and then calculating the distance between the corresponding points of the test cases.
+Due to the better results ART showed compared to traditional random testing in numerical domains, numerous studies have been conducted on implementing ART in non-numerical domains with object-oriented inputs. The common approach in these methods is to map object-oriented test cases onto one or more multi-dimensional spaces using the inputs and outputs of the system under test during the execution of test cases.
+Another challenge in developing a strategy for implementing ART is reducing the cost of selecting test cases when the number of test cases is high. Since the difference between each candidate test case and every previously selected test case must be calculated, selecting a new test case becomes costly when the number of previously selected test cases is large.
+\newline
+In this thesis, a method for calculating the difference between test cases is proposed, based on scoring the behaviors observed by the system under test during the execution of test cases. This method not only allows for calculating the difference between two test cases but also enables the calculation of the difference between a test case and a set of other test cases, or even between two sets of test cases. The cost of selecting a new test case in this method is not dependent on the number of previously selected test cases. Moreover, it shows better performance regarding coverage criteria and fault detection capability compared to other test case selection methods based on distance calculation.
 }
